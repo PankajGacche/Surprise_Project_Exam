@@ -1,0 +1,21 @@
+version: "3.8"
+services: 
+  wordpress:
+    image: wordpress
+    container_name: containerwordpress
+    environment:
+      DB_NAME: dbwordpress1
+      DB_USER: admin1
+      DB_PASSWORD: 12456671
+      DB_HOST: 127.0.0.1:3306
+    ports: 
+      - "8088:80"
+  database:
+    image: mysql:latest
+    container_name: containerdatabase
+    environment:
+      MYSQL_DATABASE: dbwordpress
+      MYSQL_USER: exampleuser1
+      MYSQL_PASSWORD: examplepass1
+      MYSQL_ROOT_PASSWORD: '3425675'
+ 
